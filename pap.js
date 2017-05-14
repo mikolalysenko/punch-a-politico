@@ -114,9 +114,9 @@ require('resl')({
 
     regl.frame(() => {
       simulate.step(state, {
-        damping: 0.9,
-        solveSteps: 1,
-        restore: 0.1
+        damping: geometry.damping,
+        solveSteps: geometry.solveSteps,
+        restore: geometry.restore
       })
 
       // enforce boundary conditions on bottom half of mesh
